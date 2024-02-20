@@ -5,33 +5,71 @@
   <title>Web Sprint 2 Challenge</title>
   <script id="challenge">
     // 👉 CHALLENGE 1
-    function profileActivation(profile, reason) {
-
-    }
-
+     function profileActivation(profile, reason) {
+         let result = ''
+          if (profile.active === true && reason === 'because'){
+         result = {active: false, reason: 'because'}
+       } else if (profile.active === true && reason === undefined){
+        result = "confirm status manually"
+       } else if (profile.active === false && profile.reason === 'because'){
+        result = {active: true}
+       } 
+       return result
+       }
+        
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
-
+      let result = ''
+      let mygrid = [ 
+      ["🟥", "🟦", "🟥"],
+      ["🟦", "🟥", "🟥"],
+      ["🟥", "🟦", "🟦"]
+      ];
+      for(let x = 0; x <= mygrid.length; x++){
+        for (let y = 0; y <= mygrid.length; y++){
+        }
+      }
     }
+
+    //let result = mineSweeper()
+    //console.log(result)
 
     // 👉 CHALLENGE 3
     function booleanize(obj) {
+      let result = ''
+      for (let i = 0; i < obj.length; i++){
+        if (obj = 0){
+          return false
+        } if (obj = 1){
+          return true
+        } if (obj = null){
 
+        }
+         
+      }
     }
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
-
+      let result = ''
+      forbidden = ["of", "silent"]
+      if (text === forbidden){
+        forbidden -= text
+      }  
     }
+
+    let result = scrub('out of the silent planet', ["of", "silent"])
+    console.log(result)
+
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
-
+      let result = ''
     }
 
     // 👉 CHALLENGE 6 (bonus, NOT graded)
     function diceRolls() {
-
+      let result = ''
     }
 
     // 🧪 DO NOT make any changes below this line ===================
