@@ -37,16 +37,21 @@
     // 👉 CHALLENGE 3
     function booleanize(obj) {
       let result = ''
-      for (let i = 0; i < obj.length; i++){
-        if (obj = 0){
-          return false
-        } if (obj = 1){
-          return true
-        } if (obj = null){
-
+      for (let i in obj){
+        if (i.length > 9){
+          return "shorten all prop names to 9 chars or less"
         }
-         
+        if (obj[i] === 0){
+          result = obj[i] = false
+        } 
+        if (obj[i] === 1){
+          result = obj[i] = true
+        } 
+        if (obj[i] === null){
+          result = delete obj[i]
+        } 
       }
+      return obj
     }
 
     // 👉 CHALLENGE 4
@@ -57,10 +62,6 @@
         forbidden -= text
       }  
     }
-
-    let result = scrub('out of the silent planet', ["of", "silent"])
-    console.log(result)
-
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
