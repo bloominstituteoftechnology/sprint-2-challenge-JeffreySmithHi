@@ -56,12 +56,19 @@
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
-      let result = ''
-      forbidden = ["of", "silent"]
-      if (text === forbidden){
-        forbidden -= text
-      }  
+    let result = text;
+    let xValue = 'x';
+    for (let i = 0; i < forbidden.length; i++) {
+        let forbiddenWord = forbidden[i];
+        let xRepeated = '';
+        for (let j = 0; j < forbiddenWord.length; j++) {
+            xRepeated += xValue;
+        }
+        result = result.split(forbiddenWord).join(xRepeated);
+      }
+    return result;
     }
+
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
     function normalizePhoneNumber(num) {
